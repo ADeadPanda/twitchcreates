@@ -1,0 +1,183 @@
+@import url("https: //fonts.googleapis.com/css2?family=Lato: wght@300&family=Oswald: wght@700&display=swap");
+:root {
+  --twitch-bg: #252525;
+  --twitch-color: #6441a5;
+  --button-color: #333333;
+  --background: #474747bf;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--twitch-bg);
+  height: 100%;
+  text-decoration: none !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body .navbar {
+  background-color: #424242;
+  padding-left: 3em;
+  padding-right: 1.5em;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-bottom: 2.75em;
+}
+
+body .navbar .nav .logo {
+  text-decoration: none;
+}
+
+body .navbar .nav .logo .logo-1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 2em;
+  color: var(--twitch-color);
+  background-color: var(--button-color);
+  border-style: none;
+  border-radius: .5em;
+  padding-bottom: .2em;
+  padding-top: .15em;
+  padding-right: .5em;
+  padding-left: .5em;
+}
+
+body .navbar .nav .logo .logo-2 {
+  color: white;
+}
+
+body .navbar .Tutorial {
+  display: none;
+}
+
+body .navbar .Tutorial .tutorial {
+  text-decoration: none;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  font-size: 1.5em;
+  color: white;
+  background-color: var(--button-color);
+  border-style: none;
+  border-radius: .5em;
+  padding-bottom: .2em;
+  padding-top: .15em;
+  padding-right: .5em;
+  padding-left: .5em;
+}
+
+body .navbar .Customize {
+  display: inline-block;
+}
+
+body .navbar .Customize .customize {
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5em;
+  color: white;
+  background-color: var(--button-color);
+  border-style: none;
+  border-radius: .5em;
+  padding-bottom: .2em;
+  padding-top: .15em;
+  padding-right: .5em;
+  padding-left: .5em;
+}
+
+body .navbar .dropdown {
+  position: relative;
+  display: block;
+  float: right;
+}
+
+body .navbar .dropdown .dropbtn {
+  background: none;
+  color: var(--twitch-bg);
+  border: none;
+  cursor: pointer;
+}
+
+body .navbar .dropdown .dropbtn .menu {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  pointer-events: none;
+  height: 3em;
+  width: 3em;
+}
+
+body .navbar .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  background-color: #6441a5a4;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
+  z-index: 1;
+  right: 0;
+}
+
+body .navbar .dropdown .dropdown-content .link {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+body .navbar .dropdown .show {
+  display: block;
+}
+
+body .container {
+  height: 98%;
+  margin-left: 10em;
+  margin-right: 10em;
+  padding-top: .25em;
+  background-color: var(--background);
+}
+
+body .container .Info {
+  font-size: 1.2em;
+}
+
+body .container .Info .List {
+  display: inline-block;
+  color: white;
+  padding-left: 3em;
+}
+
+body .container .Info .vid {
+  display: inline-block;
+  zoom: 1.05;
+}
+
+body .container .Info .vid .video {
+  border: none;
+  width: 27em;
+  height: 14em;
+  margin-left: 4em;
+}
+
+body .container .Disclamer {
+  font-size: 1.2em;
+  text-align: center;
+  color: white;
+}
+
+body .footer {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  text-indent: 3em;
+  padding-top: 1em;
+  padding-bottom: .25em;
+  background-color: black;
+  background-color: #474747bf;
+}
+/*# sourceMappingURL=tut.css.map */
