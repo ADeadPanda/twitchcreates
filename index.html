@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Twitch Shout Out Generator</title>
+		<link rel="stylesheet" type="text/css" href="/assets/css/generator.css">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+	</head>
+	<body onload="onInit()">
+		<div class="navbar">
+			<div class="dropdown">
+				<button  class="dropbtn" onclick="navmenu()">
+                    <img src="/assets/images/3bar.png" class="menu">
+                </button>
+				<div id="myDropdown" class="dropdown-content">
+					<a class="link" href="/Customize/">Customize</a>
+					<a class="link" href="/Tutorial/">Tutorial</a>
+				</div>
+			</div>
+			<div class="nav">
+				<a class="logo" href="#">
+					<main class="logo-1">Twitch<span class="logo-2">Creates</span></main>
+				</a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="mt-4">
+				<a class="generate_link" href="https://twitchtokengenerator.com/" target="_blank">Generate a Twitch Access Token</a>
+			</div>
+			<br>
+			<div class="form-label-group">
+				<label for="mainAccount" id="username">Twitch Username</label>
+				<input type="text" id="mainAccount" class="form-control">
+                <br>
+				<label for="ref" id="token">Access Token</label>
+				<input type="password" id="ref" class="form-control" required>
+				<span id="show_ref" title="Show/Hide">show</span>
+			</div>
+			<hr>
+			<div class="opt">Options</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="showClip" checked>
+				<label class="form-check-label" for="showClip">
+				Show: a random clip
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="showRecentClip">
+				<label class="form-check-label" for="showRecentClip">
+				Show: the most recent popular clip
+				</label>
+			</div>
+			<br>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="showText" checked>
+				<label class="form-check-label" for="showText"> Show: "Go show {username} some Love!" on top of the clip</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="customTextChk">
+				<label class="form-check-label" for="customTextChk">Show: Custom Text</label>
+				<input class="form-check-input" type="text" id=customText>
+				<label class="form-check-label" for="customTextChk"> use {username} to insert the shouted out channel</label>
+			</div>
+			<br>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="modsOnly" checked>
+				<label class="form-check-label" for="modsOnly">Moderator only</label>
+			</div>
+			<br>
+            <hr>
+			<div class="generate_button">
+				<button id="generate_button" type="button">Generate Overlay Link</button>
+			</div>
+			<br>
+			<div id="overlaylink" class="hide"></div>
+		</div>
+        <div class="footer">
+			<a href="mailto:ADeadPanda@twitchcreates.com">Contact Me with E-Mail with any questions or issues. </a></p>
+        </div>
+		<script>
+			function onInit() {
+			
+			    if (document.getElementById("customTextChk").checked) {
+			        document.getElementById("showText").checked = false;
+			    }
+			
+			    if (document.getElementById("showText").checked) {
+			        document.getElementById("customTextChk").checked = false;
+			    }
+			
+			    document.getElementById("ref").value = localStorage.getItem("TwitchSORef");
+			    document.getElementById("mainAccount").value = localStorage.getItem("TwitchSOMainAccount");
+			
+			    if (document.getElementById("showClip").checked) {
+			        document.getElementById("showRecentClip").checked = false;
+			    }
+			
+			    if (document.getElementById("showRecentClip").checked) {
+			        document.getElementById("showClip").checked = false;
+			    }
+			}
+			
+			document.getElementById("showText").addEventListener("click", function(e) {
+			    document.getElementById("customTextChk").checked = false;
+			}, false);
+			
+			document.getElementById("customTextChk").addEventListener("click", function(e) {
+			    document.getElementById("showText").checked = false;
+			}, false);
+			
+			document.getElementById("showClip").addEventListener("click", function(e) {
+			    document.getElementById("showRecentClip").checked = false;
+			}, false);
+			
+			document.getElementById("showRecentClip").addEventListener("click", function(e) {
+			    document.getElementById("showClip").checked = false;
+			}, false);
+			
+			document.getElementById("show_ref").addEventListener("click", function(e) {
+			    if (document.getElementById("show_ref").innerText === "hide") {
+			        document.getElementById("show_ref").innerText = "show";
+			        document.getElementById("ref").setAttribute('type', 'password');
+			    } else {
+			        document.getElementById("show_ref").innerText = "hide";
+			        document.getElementById("ref").setAttribute('type', 'text');
+			    }
+			}, false);
+			
+			document.getElementById("generate_button").addEventListener("click", function(e) {
+			    let mainAccount = document.getElementById("mainAccount").value;
+			    let customText = document.getElementById("customText").value;
+			    let showClip = document.getElementById("showClip").checked;
+			    let showRecentClip = document.getElementById("showRecentClip").checked;
+			    let modsOnly = document.getElementById("modsOnly").checked;
+			    let showText = document.getElementById("showText").checked;
+			    let customTextChk = document.getElementById("customTextChk").checked;
+			    if (!mainAccount) {
+			        alert('Twitch username is not set');
+			    }
+			    let ref = document.getElementById("ref").value;
+			    localStorage.setItem("TwitchSORef", ref);
+			    localStorage.setItem("TwitchSOMainAccount", mainAccount);
+			
+			    //build overlay url
+			    if (mainAccount) {
+			        let srcURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
+			        let fullUrl = srcURL + "shoutout.html?channel=" + mainAccount.toLowerCase() + "&showClip=" + showClip + "&showRecentClip=" + showRecentClip + "&showText=" + showText + "&customTextChk=" + customTextChk + "&customText=" + customText + "&modsOnly=" + modsOnly + "&ref=" + btoa(ref);
+			        document.getElementById("overlaylink").classList.remove("hide");
+			        document.getElementById("overlaylink").innerHTML = "Add this link as a browser source in OBS.<br>" +
+			            "<a style='word-break:break-all;' href='" + fullUrl + "' target='_blank'>" + fullUrl + "</a><br><span class='text-warning'>* Never share this url with anyone or show it on stream!</span>";
+			        alert("Do not share with anyone! ");
+			    } else {
+			        alert("Error Contact me @ DeadPanda#0001 on discord")
+			    }
+			});
+		</script>
+	</body>
+    <script>
+        function navmenu() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+        }
+    </script>
+	<script type="text/javascript">
+		var siteWidth = 1280;
+		var scale = screen.width / siteWidth;
+		
+		document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=' + siteWidth + ', initial-scale=' + scale + '');
+	</script>
+</html>
