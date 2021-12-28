@@ -148,7 +148,7 @@ body .container .mt-4 .generate_link {
           text-decoration-line: none;
   width: 15em;
   font-size: 2em;
-  color: white;
+  color: #fdfdfd;
   background-color: var(--twitch-color);
   border-style: none;
   border-radius: .5em;
