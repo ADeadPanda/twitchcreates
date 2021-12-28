@@ -27,7 +27,7 @@ jobs:
           api-key: ${{ secrets.IONOS_API_KEY }}
           bootstrap-deploy: ${{ steps.project.outputs.bootstrap-deploy }}
           branch-id: ${{ steps.project.outputs.branch-id }}
-          dist-folder: ./main
+          dist-folder: ./public_html
           project: ${{ secrets.IONOS_PROJECT_ID }}
           remote-host: ${{ steps.project.outputs.remote-host }}
           service-host: api-us.ionos.space
