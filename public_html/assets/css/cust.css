@@ -18,42 +18,45 @@ body {
 }
 
 body .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #424242;
-  padding-left: 3em;
-  padding-right: 1.5em;
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
-  margin-bottom: 2.75em;
+  padding: 0.5%;
 }
 
 body .navbar .nav .logo {
+  display: relative;
   text-decoration: none;
 }
 
 body .navbar .nav .logo .logo-1 {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  font-size: 2em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 200%;
   color: var(--twitch-color);
   background-color: var(--button-color);
-  border-style: none;
   border-radius: 0.5em;
-  padding-bottom: 0.2em;
-  padding-top: 0.15em;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
+  padding-bottom: 0.3%;
+  padding-top: 0.3%;
+  padding-right: 0.75%;
+  padding-left: 0.75%;
 }
 
 body .navbar .nav .logo .logo-2 {
   color: white;
 }
 
-body .navbar .nav .Tutorial {
+body .navbar .Tutorial {
   display: none;
 }
 
-body .navbar .nav .Tutorial .tutorial {
+body .navbar .Tutorial .tutorial {
   text-decoration: none;
   width: -webkit-min-content;
   width: -moz-min-content;
@@ -69,15 +72,15 @@ body .navbar .nav .Tutorial .tutorial {
   padding-left: 0.5em;
 }
 
-body .navbar .nav .Customize {
+body .navbar .Customize {
   display: inline-block;
 }
 
-body .navbar .nav .Customize .customize {
+body .navbar .Customize .customize {
   text-decoration: none;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 1.5em;
   color: white;
   background-color: var(--button-color);
@@ -90,8 +93,8 @@ body .navbar .nav .Customize .customize {
 }
 
 body .navbar .dropdown {
+  padding-right: 2.5%;
   position: relative;
-  display: block;
   float: right;
 }
 
@@ -103,16 +106,19 @@ body .navbar .dropdown .dropbtn {
 }
 
 body .navbar .dropdown .dropbtn .menu {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   pointer-events: none;
-  height: 2.5em;
-  width: 2.5em;
+  height: 3em;
+  width: 3em;
 }
 
 body .navbar .dropdown .dropdown-content {
   display: none;
   position: absolute;
   background-color: black;
-  background-color: #6441a5a4;
+  background-color: #6441a5;
   min-width: 160px;
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
@@ -132,10 +138,17 @@ body .navbar .dropdown .show {
 }
 
 body .container {
-  margin-left: 10em;
-  margin-right: 10em;
-  padding-top: 3em;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 1%;
   background-color: var(--background);
+  margin-bottom: 5%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
 }
 
 body .container .Instrustions {
@@ -144,83 +157,84 @@ body .container .Instrustions {
   text-align: center;
 }
 
-body .container .blocks {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 body .container .blocks .headings {
-  margin: 0;
-  color: var(--twitch-color);
+  text-align: center;
 }
 
-body .container .blocks .headings .head {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+body .container .blocks .headings .heads {
+  width: 100%;
   margin: auto;
-  padding-left: .5em;
-  padding-right: .5em;
+  margin-top: 5%;
+  color: var(--twitch-color);
   font-size: 1.5em;
 }
 
-body .container .blocks .headings .head .css {
+body .container .blocks .headings .heads .css {
+  margin-left: 5%;
+  text-align: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: inline-block;
   vertical-align: top;
-  margin-right: 1em;
+  margin: 5%;
+  margin-top: 0;
 }
 
-body .container .blocks .headings .head .css .head {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: auto;
+body .container .blocks .headings .heads .css .head {
+  margin-top: 1%;
+  font-size: 100%;
   font-weight: 700;
   border: solid white;
+  background-color: #818181;
 }
 
-body .container .blocks .headings .head .css .cssBlock {
+body .container .blocks .headings .heads .css .cssBlock {
   color: white;
-  text-align: left;
-  margin-bottom: 3em;
+  background-color: #3a3a3ab4;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-body .container .blocks .headings .head .css .cssBlock .CodeBlock1 {
-  font-size: auto;
+body .container .blocks .headings .heads .css .cssBlock .CodeBlock1 {
+  text-align: left;
+  font-size: 100%;
   margin: 0;
   padding: 0;
 }
 
-body .container .blocks .headings .head .font {
-  -ms-grid-column-align: right;
-      justify-self: right;
+body .container .blocks .headings .heads .font {
+  margin-left: 5%;
+  text-align: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: inline-block;
   vertical-align: top;
-  margin-left: 1em;
+  margin: 5%;
+  margin-top: 0;
 }
 
-body .container .blocks .headings .head .font .head {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: auto;
+body .container .blocks .headings .heads .font .head {
+  margin-top: 1%;
+  font-size: 100%;
   font-weight: 700;
   border: solid white;
+  background-color: #818181;
 }
 
-body .container .blocks .headings .head .font .fontBlock {
+body .container .blocks .headings .heads .font .fontBlock {
   color: white;
   text-align: center;
-  margin-bottom: 3em;
+  background-color: #3a3a3ab4;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-body .container .blocks .headings .head .font .fontBlock .CodeBlock2 {
-  font-size: 1.2em;
+body .container .blocks .headings .heads .font .fontBlock .CodeBlock2 {
+  font-size: 100%;
   margin: 0;
   padding: 0;
 }

@@ -9,22 +9,6 @@
 		<link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon-96x96.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
       <body>
-         <div class="navbar">
-            <div class="dropdown">
-               <button  class="dropbtn" onclick="navmenu()">
-                       <img src="../assets/images/3bar.png" class="menu">
-                   </button>
-               <div id="myDropdown" class="dropdown-content">
-                  <a class="link" href="../">Home</a>
-                  <a class="link" href="../Customize/">Customize</a>
-               </div>
-            </div>
-            <div class="nav">
-               <a class="logo" href="../">
-                  <main class="logo-1">Twitch<span class="logo-2">Creates</span></main>
-               </a>
-            </div>
-         </div>
       <div class="container">
          <div class="Info">
             <ol class="List">
@@ -45,15 +29,32 @@
          <div class="vid">
          <iframe class="video" src="https://www.youtube.com/embed/wJ_4tiOf6hc"></iframe>
          </div>
-         </div>
          <blockquote class="Disclamer">
             **** Make sure you do not include the @ symbol in the command or it will not work! ****
          </blockquote>
+         </div>
+      </div>
+      <div class="navbar">
+         <div class="dropdown">
+            <button  class="dropbtn" onclick="navmenu()">
+                    <img src="../assets/images/3bar.png" class="menu">
+                </button>
+            <div id="myDropdown" class="dropdown-content">
+               <a class="link" href="../">Home</a>
+               <a class="link" href="../Customize/">Customize</a>
+            </div>
+         </div>
+         <div class="nav">
+            <a class="logo" href="../">
+               <main class="logo-1">Twitch<span class="logo-2">Creates</span></main>
+            </a>
+         </div>
+      </div>
+      <div class="footer">
+         <a class="foot" href="mailto:ADeadPanda@twitchcreates.com">Contact Me with E-Mail with any questions or issues. </a></p>
       </div>
    </body>
-   <div class="footer">
-      <a class="foot" href="mailto:ADeadPanda@twitchcreates.com">Contact Me with E-Mail with any questions or issues. </a></p>
-   </div>
+
    <script>
       function navmenu() {
       document.getElementById("myDropdown").classList.toggle("show");

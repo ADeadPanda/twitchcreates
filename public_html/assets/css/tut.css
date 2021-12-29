@@ -7,25 +7,25 @@
 }
 
 body {
-  padding: 0;
   margin: 0;
-  background-color: var(--twitch-bg);
   height: 100%;
-  text-decoration: none !important;
-  overflow-x: hidden;
-  overflow-y: auto;
+  background-color: var(--twitch-bg);
 }
 
 body .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #424242;
-  padding-left: 3em;
-  padding-right: 1.5em;
-  padding-bottom: .5em;
-  padding-top: .5em;
-  margin-bottom: 2.75em;
+  padding: 0.5%;
 }
 
 body .navbar .nav .logo {
+  display: relative;
   text-decoration: none;
 }
 
@@ -33,15 +33,14 @@ body .navbar .nav .logo .logo-1 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 2em;
+  font-size: 200%;
   color: var(--twitch-color);
   background-color: var(--button-color);
-  border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
-  padding-left: .5em;
+  border-radius: 0.5em;
+  padding-bottom: 0.3%;
+  padding-top: 0.3%;
+  padding-right: 0.75%;
+  padding-left: 0.75%;
 }
 
 body .navbar .nav .logo .logo-2 {
@@ -61,11 +60,11 @@ body .navbar .Tutorial .tutorial {
   color: white;
   background-color: var(--button-color);
   border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
-  padding-left: .5em;
+  border-radius: 0.5em;
+  padding-bottom: 0.2em;
+  padding-top: 0.15em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 body .navbar .Customize {
@@ -81,16 +80,16 @@ body .navbar .Customize .customize {
   color: white;
   background-color: var(--button-color);
   border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
-  padding-left: .5em;
+  border-radius: 0.5em;
+  padding-bottom: 0.2em;
+  padding-top: 0.15em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 body .navbar .dropdown {
+  padding-right: 2.5%;
   position: relative;
-  display: block;
   float: right;
 }
 
@@ -114,7 +113,7 @@ body .navbar .dropdown .dropdown-content {
   display: none;
   position: absolute;
   background-color: black;
-  background-color: #6441a5a4;
+  background-color: #6441a5;
   min-width: 160px;
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
@@ -134,15 +133,28 @@ body .navbar .dropdown .show {
 }
 
 body .container {
-  height: 98%;
-  margin-left: 10em;
-  margin-right: 10em;
-  padding-top: .25em;
+  position: fixed;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 1%;
   background-color: var(--background);
+  margin-bottom: 5%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
 }
 
 body .container .Info {
-  font-size: 1.2em;
+  font-size: 125%;
+}
+
+body .container .Info .Disclamer {
+  font-size: 120%;
+  font-weight: 700;
+  text-align: center;
+  color: white;
 }
 
 body .container .Info .List {
@@ -152,31 +164,31 @@ body .container .Info .List {
 }
 
 body .container .Info .vid {
+  padding-bottom: 1.25%;
+  padding-top: 1.25%;
   display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
   zoom: 1.05;
 }
 
 body .container .Info .vid .video {
   border: none;
-  width: 27em;
-  height: 14em;
-  margin-left: 4em;
-}
-
-body .container .Disclamer {
-  font-size: 1.2em;
-  text-align: center;
-  color: white;
+  height: 100%;
+  width: 30%;
 }
 
 body .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  left: 0;
   margin: 0;
+  height: 3%;
   width: 100%;
   text-indent: 3em;
   padding-top: 1em;
-  padding-bottom: .25em;
+  padding-bottom: 0.25em;
   background-color: black;
   background-color: #474747bf;
 }

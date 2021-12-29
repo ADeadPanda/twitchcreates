@@ -7,54 +7,51 @@
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: auto;
-  padding: 0;
   margin: 0;
+  height: 100%;
   background-color: var(--twitch-bg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  text-decoration: none !important;
 }
 
 body .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #424242;
-  padding-left: 3em;
-  padding-right: 1.5em;
-  padding-bottom: .5em;
-  padding-top: .5em;
-  margin-bottom: 2.75em;
+  padding: 0.5%;
 }
 
 body .navbar .nav .logo {
+  display: relative;
   text-decoration: none;
 }
 
 body .navbar .nav .logo .logo-1 {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  font-size: 2em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 200%;
   color: var(--twitch-color);
   background-color: var(--button-color);
-  border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
-  padding-left: .5em;
+  border-radius: 0.5em;
+  padding-bottom: 0.3%;
+  padding-top: 0.3%;
+  padding-right: 0.75%;
+  padding-left: 0.75%;
 }
 
 body .navbar .nav .logo .logo-2 {
   color: white;
 }
 
-body .navbar .nav .Tutorial {
+body .navbar .Tutorial {
   display: none;
 }
 
-body .navbar .nav .Tutorial .tutorial {
+body .navbar .Tutorial .tutorial {
   text-decoration: none;
   width: -webkit-min-content;
   width: -moz-min-content;
@@ -63,36 +60,36 @@ body .navbar .nav .Tutorial .tutorial {
   color: white;
   background-color: var(--button-color);
   border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
-  padding-left: .5em;
+  border-radius: 0.5em;
+  padding-bottom: 0.2em;
+  padding-top: 0.15em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
-body .navbar .nav .Customize {
+body .navbar .Customize {
   display: inline-block;
 }
 
-body .navbar .nav .Customize .customize {
+body .navbar .Customize .customize {
   text-decoration: none;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 1.5em;
   color: white;
   background-color: var(--button-color);
   border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
-  padding-left: .5em;
+  border-radius: 0.5em;
+  padding-bottom: 0.2em;
+  padding-top: 0.15em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 body .navbar .dropdown {
+  padding-right: 2.5%;
   position: relative;
-  display: block;
   float: right;
 }
 
@@ -104,16 +101,19 @@ body .navbar .dropdown .dropbtn {
 }
 
 body .navbar .dropdown .dropbtn .menu {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   pointer-events: none;
-  height: 2.5em;
-  width: 2.5em;
+  height: 3em;
+  width: 3em;
 }
 
 body .navbar .dropdown .dropdown-content {
   display: none;
   position: absolute;
   background-color: black;
-  background-color: #6441a5a4;
+  background-color: #6441a5;
   min-width: 160px;
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
@@ -133,10 +133,17 @@ body .navbar .dropdown .show {
 }
 
 body .container {
-  margin-left: 10em;
-  margin-right: 10em;
-  padding-top: 3em;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 1%;
   background-color: var(--background);
+  margin-bottom: 5%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
 }
 
 body .container .mt-4 {
@@ -151,11 +158,11 @@ body .container .mt-4 .generate_link {
   color: #fdfdfd;
   background-color: var(--twitch-color);
   border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
-  padding-left: .5em;
+  border-radius: 0.5em;
+  padding-bottom: 0.2em;
+  padding-top: 0.15em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 body .container .form-label-group {
@@ -179,7 +186,7 @@ body .container .form-label-group #mainAccount {
   color: black;
   border-style: hidden;
   width: 25%;
-  padding: .25em;
+  padding: 0.25em;
   margin-bottom: 1em;
 }
 
@@ -189,12 +196,12 @@ body .container .form-label-group #ref {
   color: black;
   border-style: hidden;
   width: 25%;
-  padding: .25em;
+  padding: 0.25em;
 }
 
 body .container .form-label-group #show_ref {
   display: inline-block;
-  padding: .1em;
+  padding: 0.1em;
   text-align: center !important;
   margin-left: 1vw;
   outline: solid;
@@ -221,7 +228,7 @@ body .container .opt {
   font-weight: bolder;
   color: var(--twitch-color);
   padding-left: 1em;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
 
 body .container .form-check {
@@ -244,20 +251,22 @@ body .container .generate_button #generate_button {
   color: white;
   background-color: var(--twitch-color);
   border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
-  padding-left: .5em;
+  border-radius: 0.5em;
+  padding-bottom: 0.2em;
+  padding-top: 0.15em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 body .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  margin: 0;
   width: 100%;
   text-indent: 3em;
   padding-top: 1em;
-  padding-bottom: .25em;
+  padding-bottom: 0.25em;
   background-color: black;
   background-color: #474747bf;
 }

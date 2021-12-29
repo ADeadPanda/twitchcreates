@@ -17,69 +17,69 @@ body {
 	text-decoration: none !important;
 
 	.navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: fit-content;
 		background-color: #424242;
-		padding-left: 3em;
-		padding-right: 1.5em;
-		padding-bottom: 0.5em;
-		padding-top: 0.5em;
-		margin-bottom: 2.75em;
+		padding: 0.5%;
 		.nav {
 			.logo {
+				display: relative;
 				text-decoration: none;
 				.logo-1 {
-					width: min-content;
-					font-size: 2em;
+					width: fit-content;
+					font-size: 200%;
 					color: var(--twitch-color);
 					background-color: var(--button-color);
-					border-style: none;
 					border-radius: 0.5em;
-					padding-bottom: 0.2em;
-					padding-top: 0.15em;
-					padding-right: 0.5em;
-					padding-left: 0.5em;
+					padding-bottom: 0.3%;
+					padding-top: 0.3%;
+					padding-right: 0.75%;
+					padding-left: 0.75%;
 				}
 				.logo-2 {
 					color: white;
 				}
 			}
-
-			.Tutorial {
-				display: none;
-				.tutorial {
-					text-decoration: none;
-					width: min-content;
-					font-size: 1.5em;
-					color: white;
-					background-color: var(--button-color);
-					border-style: none;
-					border-radius: 0.5em;
-					padding-bottom: 0.2em;
-					padding-top: 0.15em;
-					padding-right: 0.5em;
-					padding-left: 0.5em;
-				}
+		}
+		.Tutorial {
+			display: none;
+			.tutorial {
+				text-decoration: none;
+				width: min-content;
+				font-size: 1.5em;
+				color: white;
+				background-color: var(--button-color);
+				border-style: none;
+				border-radius: 0.5em;
+				padding-bottom: 0.2em;
+				padding-top: 0.15em;
+				padding-right: 0.5em;
+				padding-left: 0.5em;
 			}
+		}
 
-			.Customize {
-				display: inline-block;
-				.customize {
-					text-decoration: none;
-					width: min-content;
-					font-size: 1.5em;
-					color: white;
-					background-color: var(--button-color);
-					border-style: none;
-					border-radius: 0.5em;
-					padding-bottom: 0.2em;
-					padding-top: 0.15em;
-					padding-right: 0.5em;
-					padding-left: 0.5em;
-				}
+		.Customize {
+			display: inline-block;
+			.customize {
+				text-decoration: none;
+				width: fit-content;
+				font-size: 1.5em;
+				color: white;
+				background-color: var(--button-color);
+				border-style: none;
+				border-radius: 0.5em;
+				padding-bottom: 0.2em;
+				padding-top: 0.15em;
+				padding-right: 0.5em;
+				padding-left: 0.5em;
 			}
 		}
 		.dropdown {
+			padding-right: 2.5%;
 			position: relative;
-			display: block;
 			float: right;
 			.dropbtn {
 				background: none;
@@ -87,16 +87,17 @@ body {
 				border: none;
 				cursor: pointer;
 				.menu {
+					align-self: center;
 					pointer-events: none;
-					height: 2.5em;
-					width: 2.5em;
+					height: 3em;
+					width: 3em;
 				}
 			}
 			.dropdown-content {
 				display: none;
 				position: absolute;
 				background-color: rgb(0, 0, 0);
-				background-color: #6441a5a4;
+				background-color: #6441a5;
 				min-width: 160px;
 				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
 				z-index: 1;
@@ -114,67 +115,79 @@ body {
 		}
 	}
 	.container {
-		margin-left: 10em;
-		margin-right: 10em;
-		padding-top: 3em;
+		position: absolute;
+		margin-top: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		padding-top: 1%;
 		background-color: var(--background);
+		margin-bottom: 5%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
 		.Instrustions {
 			color: white;
 			font-size: 1.2em;
 			text-align: center;
 		}
 		.blocks {
-			justify-content: center;
 			.headings {
-				margin: 0;
-				color: var(--twitch-color);
-				.head {
-                    width: fit-content;
+				text-align: center;
+				.heads {
+                    width: 100%;
                     margin: auto;
-                    padding-left: .5em;
-                    padding-right: .5em;
+					margin-top: 5%;
+					color: var(--twitch-color);
 					.css {
-                        width: fit-content;
+						margin-left: 5%;
+						text-align: center;
+						width: fit-content;
                         display: inline-block;
                         vertical-align: top;
-                        margin-right: 1em;
+						margin: 5%;
+						margin-top: 0;
                         .head{
-							margin-top: 1em;
-							margin-bottom: 1em;
-                            font-size: auto;
+							margin-top: 1%;
+                            font-size: 100%;
                             font-weight: 700;
                             border: solid white;
+							background-color: #818181;
                         }
                         .cssBlock {
                             color: white;
-                            text-align: left;
-                            margin-bottom: 3em;
+							background-color: #3a3a3ab4;
+							height: fit-content;
                             .CodeBlock1 {
-                                font-size: auto;
+								text-align: left;
+                                font-size: 100%;
                                 margin: 0;
                                 padding: 0;
                             }
                         }
 					}
 					.font {
-                        justify-self: right;
-                        width: fit-content;
+						margin-left: 5%;
+						text-align: center;
+						width: fit-content;
                         display: inline-block;
                         vertical-align: top;
-                        margin-left: 1em;
+						margin: 5%;
+						margin-top: 0;
                         .head{
-							margin-top: 1em;
-							margin-bottom: 1em;
-                            font-size: auto;
+							margin-top: 1%;
+                            font-size: 100%;
                             font-weight: 700;
                             border: solid white;
+							background-color: #818181;
                         }
                         .fontBlock {
                             color: white;
                             text-align: center;
-                            margin-bottom: 3em;
+							background-color: #3a3a3ab4;
+							height: fit-content;
                             .CodeBlock2 {
-                                font-size: 1.2em;
+                                font-size: 100%;
                                 margin: 0;
                                 padding: 0;
                             }
