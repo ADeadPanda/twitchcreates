@@ -1,4 +1,3 @@
-@import url("https: //fonts.googleapis.com/css2?family=Lato: wght@300&family=Oswald: wght@700&display=swap");
 :root {
   --twitch-bg: #252525;
   --twitch-color: #6441a5;
@@ -22,8 +21,8 @@ body .navbar {
   background-color: #424242;
   padding-left: 3em;
   padding-right: 1.5em;
-  padding-bottom: .5em;
-  padding-top: .5em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
   margin-bottom: 2.75em;
 }
 
@@ -39,11 +38,11 @@ body .navbar .nav .logo .logo-1 {
   color: var(--twitch-color);
   background-color: var(--button-color);
   border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
-  padding-left: .5em;
+  border-radius: 0.5em;
+  padding-bottom: 0.2em;
+  padding-top: 0.15em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 body .navbar .nav .logo .logo-2 {
@@ -63,11 +62,11 @@ body .navbar .nav .Tutorial .tutorial {
   color: white;
   background-color: var(--button-color);
   border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
-  padding-left: .5em;
+  border-radius: 0.5em;
+  padding-bottom: 0.2em;
+  padding-top: 0.15em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 body .navbar .nav .Customize {
@@ -83,11 +82,11 @@ body .navbar .nav .Customize .customize {
   color: white;
   background-color: var(--button-color);
   border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
-  padding-left: .5em;
+  border-radius: 0.5em;
+  padding-bottom: 0.2em;
+  padding-top: 0.15em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 body .navbar .dropdown {
@@ -139,116 +138,93 @@ body .container {
   background-color: var(--background);
 }
 
-body .container .mt-4 {
+body .container .Instrustions {
+  color: white;
+  font-size: 1.2em;
   text-align: center;
 }
 
-body .container .mt-4 .generate_link {
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
-  width: 15em;
-  font-size: 2em;
-  color: #fdfdfd;
-  background-color: var(--twitch-color);
-  border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
-  padding-left: .5em;
+body .container .blocks {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body .container .form-label-group {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  display: block;
-  padding-bottom: 1em;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
-  padding-left: 2em;
-  padding-right: 2em;
-  border-style: none;
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
-body .container .form-label-group #mainAccount {
-  font-size: 1em;
-  display: inline-block;
-  color: black;
-  border-style: hidden;
-  width: 25%;
-  padding: .25em;
-  margin-bottom: 1em;
-}
-
-body .container .form-label-group #ref {
-  font-size: 1em;
-  display: inline-block;
-  color: black;
-  border-style: hidden;
-  width: 25%;
-  padding: .25em;
-}
-
-body .container .form-label-group #show_ref {
-  display: inline-block;
-  padding: .1em;
-  text-align: center !important;
-  margin-left: 1vw;
-  outline: solid;
-  background-color: rgba(102, 102, 102, 0.75);
-  background-color: rgba(102, 102, 102, 0.5);
-  font-size: 1em;
-  font-weight: bold;
-  color: white;
-}
-
-body .container .form-label-group #username {
-  font-size: 1.25em;
-  padding-right: 1em;
-  padding-bottom: 1;
-}
-
-body .container .form-label-group #token {
-  font-size: 1.25em;
-  padding-right: 2.75em;
-}
-
-body .container .opt {
-  font-size: 3em;
-  font-weight: bolder;
+body .container .blocks .headings {
+  margin: 0;
   color: var(--twitch-color);
-  padding-left: 1em;
-  padding-bottom: .5em;
 }
 
-body .container .form-check {
-  color: white;
-  font-size: 1.5em;
-  padding-left: 2em;
-}
-
-body .container .generate_button {
-  text-align: center;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-}
-
-body .container .generate_button #generate_button {
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
-  width: 15em;
-  font-size: 2em;
-  color: white;
-  background-color: var(--twitch-color);
-  border-style: none;
-  border-radius: .5em;
-  padding-bottom: .2em;
-  padding-top: .15em;
-  padding-right: .5em;
+body .container .blocks .headings .head {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
   padding-left: .5em;
+  padding-right: .5em;
+  font-size: 1.5em;
+}
+
+body .container .blocks .headings .head .css {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1em;
+}
+
+body .container .blocks .headings .head .css .head {
+  font-size: auto;
+  font-weight: 700;
+  border: solid white;
+}
+
+body .container .blocks .headings .head .css .cssBlock {
+  color: white;
+  text-align: left;
+  margin-bottom: 3em;
+}
+
+body .container .blocks .headings .head .css .cssBlock .CodeBlock1 {
+  font-size: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body .container .blocks .headings .head .font {
+  -ms-grid-column-align: right;
+      justify-self: right;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 1em;
+}
+
+body .container .blocks .headings .head .font .head {
+  font-size: auto;
+  font-weight: 700;
+  border: solid white;
+}
+
+body .container .blocks .headings .head .font .fontBlock {
+  color: white;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+body .container .blocks .headings .head .font .fontBlock .CodeBlock2 {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+body .container .blocks .abc {
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 
 body .footer {
@@ -257,7 +233,7 @@ body .footer {
   width: 100%;
   text-indent: 3em;
   padding-top: 1em;
-  padding-bottom: .25em;
+  padding-bottom: 0.25em;
   background-color: black;
   background-color: #474747bf;
 }
@@ -266,4 +242,4 @@ body .footer .foot {
   text-decoration: none;
   color: white;
 }
-/*# sourceMappingURL=generator.css.map */
+/*# sourceMappingURL=cust.css.map */
