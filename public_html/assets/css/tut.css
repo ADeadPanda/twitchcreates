@@ -180,4 +180,9 @@ body .footer {
   background-color: black;
   background-color: #474747bf;
 }
+
+body .footer .foot {
+  text-decoration: none;
+  color: white;
+}
 /*# sourceMappingURL=tut.css.map */
