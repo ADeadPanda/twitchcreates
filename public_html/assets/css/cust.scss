@@ -115,7 +115,8 @@ body {
 		}
 	}
 	.container {
-		position: absolute;
+		min-height: fit-content;
+		height: 75%;
 		margin-top: 5%;
 		margin-left: 5%;
 		margin-right: 5%;
@@ -124,7 +125,7 @@ body {
 		margin-bottom: 5%;
 		left: 0;
 		right: 0;
-		bottom: 0;
+		bottom: 10%;
 		top: 0;
 		.Instrustions {
 			color: white;

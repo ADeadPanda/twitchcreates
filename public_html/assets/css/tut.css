@@ -133,7 +133,6 @@ body .navbar .dropdown .show {
 }
 
 body .container {
-  position: fixed;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
@@ -155,6 +154,7 @@ body .container .Info {
 }
 
 body .container .Info .Disclamer {
+  padding-bottom: 3%;
   font-size: 120%;
   font-weight: 700;
   text-align: center;

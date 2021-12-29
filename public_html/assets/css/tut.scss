@@ -110,7 +110,6 @@ body {
 		}
 	}
 	.container {
-		position: fixed;
 		min-height: fit-content;
 		height: 75%;
 		margin-top: 5%;
@@ -126,6 +125,7 @@ body {
 		.Info {
 			font-size: 125%;
 			.Disclamer {
+				padding-bottom: 3%;
 				font-size: 120%;
 				font-weight: 700;
 				text-align: center;
