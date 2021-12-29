@@ -175,6 +175,8 @@ body .container .blocks .headings .head .css {
 }
 
 body .container .blocks .headings .head .css .head {
+  margin-top: 1em;
+  margin-bottom: 1em;
   font-size: auto;
   font-weight: 700;
   border: solid white;
@@ -204,6 +206,8 @@ body .container .blocks .headings .head .font {
 }
 
 body .container .blocks .headings .head .font .head {
+  margin-top: 1em;
+  margin-bottom: 1em;
   font-size: auto;
   font-weight: 700;
   border: solid white;
