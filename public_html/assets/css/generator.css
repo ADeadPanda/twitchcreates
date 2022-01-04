@@ -9,6 +9,7 @@
 body {
   margin: 0;
   height: 100%;
+  width: auto;
   background-color: var(--twitch-bg);
 }
 
@@ -137,10 +138,10 @@ body .container {
   min-height: -moz-fit-content;
   min-height: fit-content;
   height: 75%;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-left: 5%;
   margin-right: 5%;
-  padding-top: 1%;
+  padding-top: 5%;
   background-color: var(--background);
   margin-bottom: 5%;
   left: 0;
@@ -275,5 +276,249 @@ body .footer {
 body .footer .foot {
   text-decoration: none;
   color: white;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    margin: 0;
+    height: 100%;
+    background-color: var(--twitch-bg);
+  }
+  body .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: #424242;
+    padding: 0.5%;
+  }
+  body .navbar .nav .logo {
+    display: relative;
+    text-decoration: none;
+  }
+  body .navbar .nav .logo .logo-1 {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 200%;
+    color: var(--twitch-color);
+    background-color: var(--button-color);
+    border-radius: 0.5em;
+    padding-bottom: 0.3%;
+    padding-top: 0.3%;
+    padding-right: 0.75%;
+    padding-left: 0.75%;
+  }
+  body .navbar .nav .logo .logo-2 {
+    color: white;
+  }
+  body .navbar .Tutorial {
+    display: none;
+  }
+  body .navbar .Tutorial .tutorial {
+    text-decoration: none;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    font-size: 1.5em;
+    color: white;
+    background-color: var(--button-color);
+    border-style: none;
+    border-radius: 0.5em;
+    padding-bottom: 0.2em;
+    padding-top: 0.15em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+  }
+  body .navbar .Customize {
+    display: inline-block;
+  }
+  body .navbar .Customize .customize {
+    text-decoration: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1.5em;
+    color: white;
+    background-color: var(--button-color);
+    border-style: none;
+    border-radius: 0.5em;
+    padding-bottom: 0.2em;
+    padding-top: 0.15em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+  }
+  body .navbar .dropdown {
+    padding-right: 2.5%;
+    position: relative;
+    float: right;
+  }
+  body .navbar .dropdown .dropbtn {
+    background: none;
+    color: var(--twitch-bg);
+    border: none;
+    cursor: pointer;
+  }
+  body .navbar .dropdown .dropbtn .menu {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    pointer-events: none;
+    height: 3em;
+    width: 3em;
+  }
+  body .navbar .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    background-color: #6441a5;
+    min-width: 160px;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
+    z-index: 1;
+    right: 0;
+  }
+  body .navbar .dropdown .dropdown-content .link {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  body .navbar .dropdown .show {
+    display: block;
+  }
+  body .container {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    height: 75%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 1%;
+    background-color: var(--background);
+    margin-bottom: 5%;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    top: 0;
+  }
+  body .container .mt-4 {
+    text-align: center;
+  }
+  body .container .mt-4 .generate_link {
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none;
+    width: 15em;
+    font-size: 2em;
+    color: #fdfdfd;
+    background-color: var(--twitch-color);
+    border-style: none;
+    border-radius: 0.5em;
+    padding-bottom: 0.2em;
+    padding-top: 0.15em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+  }
+  body .container .form-label-group {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: block;
+    padding-bottom: 1em;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-style: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  body .container .form-label-group #mainAccount {
+    font-size: 1em;
+    display: inline-block;
+    color: black;
+    border-style: hidden;
+    width: 25%;
+    padding: 0.25em;
+    margin-bottom: 1em;
+  }
+  body .container .form-label-group #ref {
+    font-size: 1em;
+    display: inline-block;
+    color: black;
+    border-style: hidden;
+    width: 25%;
+    padding: 0.25em;
+  }
+  body .container .form-label-group #show_ref {
+    display: inline-block;
+    padding: 0.1em;
+    text-align: center !important;
+    margin-left: 1vw;
+    outline: solid;
+    background-color: rgba(102, 102, 102, 0.75);
+    background-color: rgba(102, 102, 102, 0.5);
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+  }
+  body .container .form-label-group #username {
+    font-size: 1.25em;
+    padding-right: 1em;
+    padding-bottom: 1;
+  }
+  body .container .form-label-group #token {
+    font-size: 1.25em;
+    padding-right: 2.75em;
+  }
+  body .container .opt {
+    font-size: 3em;
+    font-weight: bolder;
+    color: var(--twitch-color);
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+  }
+  body .container .form-check {
+    color: white;
+    font-size: 1.5em;
+    padding-left: 2em;
+  }
+  body .container .generate_button {
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  body .container .generate_button #generate_button {
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none;
+    width: 15em;
+    font-size: 2em;
+    color: white;
+    background-color: var(--twitch-color);
+    border-style: none;
+    border-radius: 0.5em;
+    padding-bottom: 0.2em;
+    padding-top: 0.15em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+  }
+  body .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 1%;
+    padding-left: 1%;
+    background-color: black;
+    background-color: #474747bf;
+  }
+  body .footer .foot {
+    text-decoration: none;
+    color: white;
+  }
 }
 /*# sourceMappingURL=generator.css.map */

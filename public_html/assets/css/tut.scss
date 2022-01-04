@@ -1,170 +1,331 @@
-@import url("https: //fonts.googleapis.com/css2?family=Lato: wght@300&family=Oswald: wght@700&display=swap");
-
 :root {
-	--twitch-bg: #252525;
-	--twitch-color: #6441a5;
-	--button-color: #333333;
-	--background: #474747bf;
+  --twitch-bg: #252525;
+  --twitch-color: #6441a5;
+  --button-color: #333333;
+  --background: #474747bf;
 }
 
 body {
-	margin: 0;
-	height: 100%;
-	background-color: var(--twitch-bg);
-	.navbar {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: fit-content;
-		background-color: #424242;
-		padding: 0.5%;
-		.nav {
-			.logo {
-				display: relative;
-				text-decoration: none;
-				.logo-1 {
-					width: fit-content;
-					font-size: 200%;
-					color: var(--twitch-color);
-					background-color: var(--button-color);
-					border-radius: 0.5em;
-					padding-bottom: 0.3%;
-					padding-top: 0.3%;
-					padding-right: 0.75%;
-					padding-left: 0.75%;
-				}
-				.logo-2 {
-					color: white;
-				}
-			}
-		}
-		.Tutorial {
-			display: none;
-			.tutorial {
-				text-decoration: none;
-				width: min-content;
-				font-size: 1.5em;
-				color: white;
-				background-color: var(--button-color);
-				border-style: none;
-				border-radius: 0.5em;
-				padding-bottom: 0.2em;
-				padding-top: 0.15em;
-				padding-right: 0.5em;
-				padding-left: 0.5em;
-			}
-		}
+  margin: 0;
+  height: 100%;
+  background-color: var(--twitch-bg);
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: #424242;
+    padding: 0.5%;
+    .nav {
+      .logo {
+        display: relative;
+        text-decoration: none;
+        .logo-1 {
+          width: fit-content;
+          font-size: 200%;
+          color: var(--twitch-color);
+          background-color: var(--button-color);
+          border-radius: 0.5em;
+          padding-bottom: 0.3%;
+          padding-top: 0.3%;
+          padding-right: 0.75%;
+          padding-left: 0.75%;
+        }
+        .logo-2 {
+          color: white;
+        }
+      }
+    }
+    .Tutorial {
+      display: none;
+      .tutorial {
+        text-decoration: none;
+        width: min-content;
+        font-size: 1.5em;
+        color: white;
+        background-color: var(--button-color);
+        border-style: none;
+        border-radius: 0.5em;
+        padding-bottom: 0.2em;
+        padding-top: 0.15em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+      }
+    }
 
-		.Customize {
-			display: inline-block;
-			.customize {
-				text-decoration: none;
-				width: fit-content;
-				font-size: 1.5em;
-				color: white;
-				background-color: var(--button-color);
-				border-style: none;
-				border-radius: 0.5em;
-				padding-bottom: 0.2em;
-				padding-top: 0.15em;
-				padding-right: 0.5em;
-				padding-left: 0.5em;
-			}
-		}
-		.dropdown {
-			padding-right: 2.5%;
-			position: relative;
-			float: right;
-			.dropbtn {
-				background: none;
-				color: var(--twitch-bg);
-				border: none;
-				cursor: pointer;
-				.menu {
-					align-self: center;
-					pointer-events: none;
-					height: 3em;
-					width: 3em;
-				}
-			}
-			.dropdown-content {
-				display: none;
-				position: absolute;
-				background-color: rgb(0, 0, 0);
-				background-color: #6441a5;
-				min-width: 160px;
-				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
-				z-index: 1;
-				right: 0;
-				.link {
-					color: white;
-					padding: 12px 16px;
-					text-decoration: none;
-					display: block;
-				}
-			}
-			.show {
-				display: block;
-			}
-		}
-	}
-	.container {
-		min-height: fit-content;
-		height: 75%;
-		margin-top: 5%;
-		margin-left: 5%;
-		margin-right: 5%;
-		padding-top: 1%;
-		background-color: var(--background);
-		margin-bottom: 5%;
-		left: 0;
-		right: 0;
-		bottom: 10%;
-		top: 0;
-		.Info {
-			font-size: 125%;
-			.Disclamer {
-				padding-bottom: 3%;
-				font-size: 120%;
-				font-weight: 700;
-				text-align: center;
-				color: white;
-			}
-			.List {
-				display: inline-block;
-				color: rgb(247, 247, 247);
-				padding-left: 3em;
-			}
-			.vid {
-				padding-bottom: 1.25%;
-				padding-top: 1.25%;
-				display: inline-block;
-				text-align: center;
-				width: 100%;
-				height: 100%;
-				zoom: 1.85;
+    .Customize {
+      display: inline-block;
+      .customize {
+        text-decoration: none;
+        width: fit-content;
+        font-size: 1.5em;
+        color: white;
+        background-color: var(--button-color);
+        border-style: none;
+        border-radius: 0.5em;
+        padding-bottom: 0.2em;
+        padding-top: 0.15em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+      }
+    }
+    .dropdown {
+      padding-right: 2.5%;
+      position: relative;
+      float: right;
+      .dropbtn {
+        background: none;
+        color: var(--twitch-bg);
+        border: none;
+        cursor: pointer;
+        .menu {
+          align-self: center;
+          pointer-events: none;
+          height: 3em;
+          width: 3em;
+        }
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(0, 0, 0);
+        background-color: #6441a5;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
+        z-index: 1;
+        right: 0;
+        .link {
+          color: white;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+      }
+      .show {
+        display: block;
+      }
+    }
+  }
+  .container {
+    min-height: fit-content;
+    height: 75%;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 5%;
+    background-color: var(--background);
+    margin-bottom: 5%;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    top: 0;
+    .Info {
+      font-size: 125%;
+      .Disclamer {
+        padding-bottom: 3%;
+        font-size: 120%;
+        font-weight: 700;
+        text-align: center;
+        color: white;
+      }
+      .List {
+        display: inline-block;
+        color: rgb(247, 247, 247);
+        padding-left: 3em;
+      }
+      .vid {
+        padding-bottom: 1.25%;
+        padding-top: 1.25%;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        zoom: 1.85;
 
-				.video {
-					border: none;
-					height: 100%;
-					width: 30%;
-				}
-			}
-		}
-	}
-	.footer {
-		position: fixed;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-		padding-top: 1%;
-		padding-left: 1%;
-		background-color: rgb(0, 0, 0);
-		background-color: #474747bf;
-		.foot {
-			text-decoration: none;
-			color: white;
-		}
-	}
+        .video {
+          border: none;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 1%;
+    padding-left: 1%;
+    background-color: rgb(0, 0, 0);
+    background-color: #474747bf;
+    .foot {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    margin: 0;
+    height: 100%;
+    background-color: var(--twitch-bg);
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: fit-content;
+      background-color: #424242;
+      padding: 0.5%;
+      .nav {
+        .logo {
+          display: relative;
+          text-decoration: none;
+          .logo-1 {
+            width: fit-content;
+            font-size: 200%;
+            color: var(--twitch-color);
+            background-color: var(--button-color);
+            border-radius: 0.5em;
+            padding-bottom: 0.3%;
+            padding-top: 0.3%;
+            padding-right: 0.75%;
+            padding-left: 0.75%;
+          }
+          .logo-2 {
+            color: red;
+          }
+        }
+      }
+      .Tutorial {
+        display: none;
+        .tutorial {
+          text-decoration: none;
+          width: min-content;
+          font-size: 1.5em;
+          color: white;
+          background-color: var(--button-color);
+          border-style: none;
+          border-radius: 0.5em;
+          padding-bottom: 0.2em;
+          padding-top: 0.15em;
+          padding-right: 0.5em;
+          padding-left: 0.5em;
+        }
+      }
+
+      .Customize {
+        display: inline-block;
+        .customize {
+          text-decoration: none;
+          width: fit-content;
+          font-size: 1.5em;
+          color: white;
+          background-color: var(--button-color);
+          border-style: none;
+          border-radius: 0.5em;
+          padding-bottom: 0.2em;
+          padding-top: 0.15em;
+          padding-right: 0.5em;
+          padding-left: 0.5em;
+        }
+      }
+      .dropdown {
+        padding-right: 2.5%;
+        position: relative;
+        float: right;
+        .dropbtn {
+          background: none;
+          color: var(--twitch-bg);
+          border: none;
+          cursor: pointer;
+          .menu {
+            align-self: center;
+            pointer-events: none;
+            height: 3em;
+            width: 3em;
+          }
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: rgb(0, 0, 0);
+          background-color: #6441a5;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
+          z-index: 1;
+          right: 0;
+          .link {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+        }
+        .show {
+          display: block;
+        }
+      }
+    }
+    .container {
+      min-height: fit-content;
+      height: 75%;
+      margin-top: 5%;
+      margin-left: 5%;
+      margin-right: 5%;
+      padding-top: 1%;
+      background-color: var(--background);
+      margin-bottom: 5%;
+      left: 0;
+      right: 0;
+      bottom: 10%;
+      top: 0;
+      .Info {
+        font-size: 125%;
+        .Disclamer {
+          padding-bottom: 3%;
+          font-size: 120%;
+          font-weight: 700;
+          text-align: center;
+          color: white;
+        }
+        .List {
+          display: inline-block;
+          color: rgb(247, 247, 247);
+          padding-left: 3em;
+        }
+        .vid {
+          padding-bottom: 1.25%;
+          padding-top: 1.25%;
+          display: inline-block;
+          text-align: center;
+          width: 100%;
+          height: 100%;
+          zoom: 1.85;
+
+          .video {
+            border: none;
+            height: 100%;
+            width: 30%;
+          }
+        }
+      }
+    }
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding-top: 1%;
+      padding-left: 1%;
+      background-color: rgb(0, 0, 0);
+      background-color: #474747bf;
+      .foot {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
 }
