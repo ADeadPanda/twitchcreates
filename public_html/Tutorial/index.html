@@ -1,78 +1,84 @@
 <!doctype html>
 <html lang="en">
-   <head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Twitch Shout Out</title>
-		<link rel="stylesheet" type="text/css" href="../assets/css/tut.css">
-		<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8893157606024069" crossorigin="anonymous"></script>
-      <body>
-      <div class="container">
-         <div class="Info">
-            <ol class="List">
-               <li class="L-one">Click the "Generate a Twitch Acess Token" button.</li>
-               <li class="L-two">Click "Custom Scope Token".</li>
-               <li class="L-three">Scroll down and find "chat:read" and "moderation:read" make sure both are on yes!</li>
-               <li class="L-four">Scroll all the way down and click "Generate Token!".</li>
-               <li class="L-five">Click the "Authorize" button.</li>
-               <li class="L-six">Complete the Captcha.</li>
-               <li class="L-seven">Copy the "Acess token".</li>
-               <li class="L-eight">Go back to "TwitchCreates.com".</li>
-               <li class="L-nine">Put your twitch username in the first textbox</li>
-               <li class="L-ten">paste your Access token in the 2nd textbox</li>
-               <li class="L-eleven">click the "Generate Overlay Link" button and copy the link at the bottom.</li>
-               <li class="L-twelve">Open OBS and create a new Browser source and paste the url you copied into the "url" field.</li>
-               <li class="L-thirteen">In your Twitch chat type "!So Twitch" to test that everything is working!</li>
-            </ol>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Twitch Shout Out</title>
+   <link rel="stylesheet" type="text/css" href="../assets/css/tut.css">
+   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8893157606024069"
+      crossorigin="anonymous"></script>
+
+<body>
+   <div class="container">
+      <div class="Info">
+         <ol class="List">
+            <li class="L-one">Click the "Generate a Twitch Acess Token" button.</li>
+            <li class="L-two">Click "Custom Scope Token".</li>
+            <li class="L-three">Scroll down and find "chat:read" and "moderation:read" make sure both are on yes!</li>
+            <li class="L-four">Scroll all the way down and click "Generate Token!".</li>
+            <li class="L-five">Click the "Authorize" button.</li>
+            <li class="L-six">Complete the Captcha.</li>
+            <li class="L-seven">Copy the "Acess token".</li>
+            <li class="L-eight">Go back to "TwitchCreates.com".</li>
+            <li class="L-nine">Put your twitch username in the first textbox</li>
+            <li class="L-ten">paste your Access token in the 2nd textbox</li>
+            <li class="L-eleven">click the "Generate Overlay Link" button and copy the link at the bottom.</li>
+            <li class="L-twelve">Open OBS and create a new Browser source and paste the url you copied into the "url"
+               field.</li>
+            <li class="L-thirteen">In your Twitch chat type "!So Twitch" to test that everything is working!</li>
+         </ol>
          <div class="vid">
-         <iframe class="video" src="https://www.youtube.com/embed/wJ_4tiOf6hc"></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/wJ_4tiOf6hc"></iframe>
          </div>
          <blockquote class="Disclamer">
             **** Make sure you do not include the @ symbol in the command or it will not work! ****
          </blockquote>
+      </div>
+   </div>
+   <div class="navbar">
+      <div class="dropdown">
+         <button class="dropbtn" onclick="navmenu()">
+            <img src="../assets/images/3bar.png" class="menu">
+         </button>
+         <div id="myDropdown" class="dropdown-content">
+            <a class="link" href="../">Home</a>
+            <a class="link" href="../Customize/">Customize</a>
          </div>
       </div>
-      <div class="navbar">
-         <div class="dropdown">
-            <button  class="dropbtn" onclick="navmenu()">
-                    <img src="../assets/images/3bar.png" class="menu">
-                </button>
-            <div id="myDropdown" class="dropdown-content">
-               <a class="link" href="../">Home</a>
-               <a class="link" href="../Customize/">Customize</a>
-            </div>
-         </div>
-         <div class="nav">
-            <a class="logo" href="../">
-               <main class="logo-1">Twitch<span class="logo-2">Creates</span></main>
-            </a>
-         </div>
+      <div class="nav">
+         <a class="logo" href="../">
+            <main class="logo-1">Twitch<span class="logo-2">Creates</span></main>
+         </a>
       </div>
-      <div class="footer">
-         <a class="foot" href="mailto:ADeadPanda@twitchcreates.com">Contact Me with E-Mail with any questions or issues. </a></p>
-      </div>
-   </body>
+   </div>
+   <div class="footer">
+      <a class="foot" href="mailto:ADeadPanda@twitchcreates.com">Contact Me with E-Mail with any questions or issues.
+      </a></p>
+   </div>
+</body>
 
-   <script>
-      function navmenu() {
+<script>
+   function navmenu() {
       document.getElementById("myDropdown").classList.toggle("show");
-      }
-      
-      // Close the dropdown menu if the user clicks outside of it
-      window.onclick = function(event) {
+   }
+
+   // Close the dropdown menu if the user clicks outside of it
+   window.onclick = function (event) {
       if (!event.target.matches('.dropbtn')) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                  openDropdown.classList.remove('show');
-              }
-          }
+         var dropdowns = document.getElementsByClassName("dropdown-content");
+         var i;
+         for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+               openDropdown.classList.remove('show');
+            }
+         }
       }
-      }
-  </script>
+   }
+</script>
+
 </html>
