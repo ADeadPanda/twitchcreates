@@ -1,0 +1,219 @@
+@import url('https: //fonts.googleapis.com/css2?family=Lato: wght@300&family=Oswald: wght@700&display=swap');
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #cccc;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(102, 102, 102, 0.5);
+    display: inline-block;
+}
+
+/* Button */
+.navbar button {
+    text-align: center;
+    border-style: none;
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+/* Link */
+.navbar button a {
+    background-color: rgb(50, 50, 50);
+    border: none;
+    color: white;
+    padding: 1vh 2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+}
+
+/* Container */
+.container {
+    background-color: rgba(102, 102, 102, 0.5);
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Heading */
+.row h1 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    position: relative;
+}
+
+/* Button */
+.container .mt-4 a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    font-size: auto;
+}
+
+/* Row */
+.container .row {
+    background-color: rgb(102, 102, 102);
+    background-color: rgba(102, 102, 102, 0.5);
+}
+
+/* Footer */
+#footer {
+    color: white;
+    background-color: rgb(102, 102, 102);
+    background-color: rgba(102, 102, 102, 0.75);
+}
+
+/* Label */
+.container .form-label-group label {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    display: block;
+    padding-bottom: 1%;
+    color: white;
+    font-weight: 700;
+    font-size: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 1px;
+    border-style: none;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: rgba(102, 102, 102, 0.5);
+}
+
+
+/* Main account */
+#mainAccount {
+    font-size: 3%;
+    margin-left: 3%;
+    display: inline-block;
+    color: white;
+    border-style: hidden;
+    width: 25%;
+    padding: .5%;
+}
+
+/* Ref */
+#ref {
+    font-size: 3%;
+    margin-left: 3%;
+    display: inline-block;
+    color: white;
+    position: relative;
+    width: 25%;
+    padding: .5%;
+}
+
+/* Show ref */
+#show_ref {
+    padding: .25%;
+    display: block;
+    width: 3% !important;
+    text-align: center !important;
+    margin-left: 1%;
+    outline: solid;
+    background-color: rgb(102, 102, 102);
+    background-color: rgba(102, 102, 102, 0.5);
+    font-size: 1vw !important;
+    font-weight: 700;
+    color: white;
+}
+
+/* Heading */
+.container h2 {
+    display: block;
+    color: white;
+    background-color: rgba(102, 102, 102, 0.5);
+    text-align: center;
+}
+
+/* Form check */
+.container .form-check {
+    color: white;
+    background-color: rgb(102, 102, 102);
+    background-color: rgba(102, 102, 102, 0.5);
+}
+
+.container .form-check-input {
+    color: white;
+    background-color: rgb(102, 102, 102);
+    border-color: white;
+}
+
+/* Button */
+#generate_button {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+.container .generate_button {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: auto;
+}
+
+#overlaylink {
+    text-align: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: rgb(122, 122, 122);
+    background-color: rgba(122, 122, 122, 0.5);
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(102, 102, 102);
+    background-color: rgba(102, 102, 102, 0.75);
+}
+
+/* Main account */
+#mainAccount {
+    background-color: rgb(102, 102, 102);
+    background-color: rgba(102, 102, 102, 0.5);
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    color: #FFFFFF;
+}
+
+/* Ref */
+#ref {
+    background-color: rgb(102, 102, 102);
+    background-color: rgba(102, 102, 102, 0.5);
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    color: #FFFFFF;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        max-width: 100%;
+        scale: 10;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color: #cccc;
+    }
+
+}
