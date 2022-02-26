@@ -170,7 +170,7 @@ $(document).ready(function () {
                     "' type='video/mp4'></video>"
                 ).appendTo("#container");
 
-                object.onplay = function () {
+                document.getElementById("clip").onplaying = function () {
                   document.getElementById("clip").remove();
                 };
 
