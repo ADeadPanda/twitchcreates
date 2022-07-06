@@ -1,188 +1,193 @@
 <!doctype html>
 <html lang="en">
-   <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5430936611938339"
-     crossorigin="anonymous"></script>
-      <style>
-         body {
+
+<head>
+   <style>
+      body {
          background-image: url('assets/images/graybg.jpg');
          background-repeat: no-repeat;
          background-size: cover;
          background-attachment: fixed;
-         }
-      </style>
-      <meta charset="utf-8">
-      <meta name="viewport" content="initial-scale=1">
-      <title>Twitch shout out generator</title>
-      <link rel="stylesheet" type="text/css" href="assets/css/dark.min.css">
-      <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png">
-      <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-icon-76x76.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-icon-120x120.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-icon-144x144.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-icon-152x152.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-icon-180x180.png">
-      <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-icon-192x192.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-      <div class="navbar">
-         <button>
-         <a href="Customize">Customize</a>
-         </button>
-         <button>
-         <a href="Tutorial">Tutorial</a>
-         </button>
+      }
+   </style>
+   <meta charset="utf-8">
+   <meta name="viewport" content="initial-scale=1">
+   <title>Twitch Generator</title>
+   <link rel="stylesheet" type="text/css" href="assets/css/generator.css">
+   <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+</head>
+
+<body onload="onInit()">
+   <div class="navbar">
+      <div class="Buttons">
+         <a href="./Customize/">
+            <button class="Customize">Customize</button>
+         </a>
+         <a href="./Tutorial/">
+            <button class="Tutorial">Tutorial</button>
+         </a>
       </div>
-   </head>
-   <body onload="onInit()">
-      <div class="container">
-         <div class="row">
-            <div class="col-1">
-               <h1 class="h2">ADeadPanda's Twitch shout out generator</h1>
-            </div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-1">
+            <h1 class="title">ADeadPanda's Twitch shout out generator</h1>
          </div>
-         <br>
-         <div class="generate_button">
+      </div>
+      <br>
+      <div class="access_button">
          <div class="mt-4">
-            <a class="generate" id="generate_button" href="https://twitchtokengenerator.com/" target="_blank">Twitch Access Token</a>
+            <a class="generate" id="access_button" href="https://twitchtokengenerator.com/" target="_blank">Twitch
+               Access Token</a>
          </div>
-        </div>
+      </div>
+      <br>
+      <div class="form-label-group">
+         <label for="mainAccount">Twitch Account</label>
+         <input type="text" id="mainAccount" class="form-control">
          <br>
-         <div class="form-label-group">
-            <label for="mainAccount">Twitch Account</label>
-            <input type="text" id="mainAccount" class="form-control">
-            <label for="ref">Access token</label>
-            <input type="password" id="ref" class="form-control" required>
-            <span id="show_ref" style="cursor:pointer;text-align:left;display:inline-block;width:70px;margin-top: 4px;font-size:smaller;vertical-align:top;" title="Show/Hide">show
-            </span>
-         </div>
-         <hr>
-         <h2>Options</h2>
-         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="showClip" checked>
-            <label class="form-check-label" for="showClip">
+         <label for="ref">Access token</label>
+         <input type="password" id="ref" class="form-control" required>
+         <span id="show_ref"
+            style="cursor:pointer;text-align:left;display:inline-block;width:70px;margin-top: 4px;font-size:smaller;vertical-align:top;"
+            title="Show/Hide">show
+         </span>
+      </div>
+      <hr>
+      <h2 class="opt">Options</h2>
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="showClip" checked>
+         <label class="form-check-label" for="showClip">
             Show: a random clip
-            </label>
-         </div>
-         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="showRecentClip">
-            <label class="form-check-label" for="showRecentClip">
-            Show: the most recent popular clip
-            </label>
-         </div>
-         <br>
-         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="showText" checked>
-            <label class="form-check-label" for="showText"> Show: "Go show {username} some Love!" on top of the clip</label>
-         </div>
-         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="customTextChk">
-            <label class="form-check-label" for="customTextChk">Show: Custom Text</label>
-            <input class="form-check-input" type="text" id=customText>
-            <label class="form-check-label" for="customTextChk"> use {username} to insert the shouted out channel</label>
-         </div>
-         <br>
-         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="modsOnly" checked>
-            <label class="form-check-label" for="modsOnly">Moderator only</label>
-         </div>
-         <br>
-         <div class="mt-4">
-         <div class="generate_button">
-         <button id="generate_button" type="button">Generate Overlay Link</button>
-         </div>
-        </div>
-         <br>
-         <div id="overlaylink" class="hide"></div>
+         </label>
       </div>
-      <script>
-         function onInit() {
-         
-             if (document.getElementById("customTextChk").checked) {
-                 document.getElementById("showText").checked = false;
-             }
-         
-             if (document.getElementById("showText").checked) {
-                 document.getElementById("customTextChk").checked = false;
-             }
-         
-             document.getElementById("ref").value = localStorage.getItem("TwitchSORef");
-             document.getElementById("mainAccount").value = localStorage.getItem("TwitchSOMainAccount");
-         
-             if (document.getElementById("showClip").checked) {
-                 document.getElementById("showRecentClip").checked = false;
-             }
-         
-             if (document.getElementById("showRecentClip").checked) {
-                 document.getElementById("showClip").checked = false;
-             }
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="showRecentClip">
+         <label class="form-check-label" for="showRecentClip">
+            Show: the most recent popular clip
+         </label>
+      </div>
+      <br>
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="showText" checked>
+         <label class="form-check-label" for="showText"> Show: "Go show {username} some Love!" on top of the
+            clip</label>
+      </div>
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="customTextChk">
+         <label class="form-check-label" for="customTextChk">Show: Custom Text</label>
+         <input class="form-check-input" type="text" id=customText>
+         <label class="form-check-label" for="customTextChk"> use {username} to insert the shouted out channel</label>
+      </div>
+      <br>
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="modsOnly" checked>
+         <label class="form-check-label" for="modsOnly">Moderator only</label>
+      </div>
+      <br>
+      <div class="mt-4">
+         <div class="generate_button">
+            <button id="generate_button" type="button">Generate Overlay Link</button>
+         </div>
+      </div>
+      <br>
+      <div id="overlaylink" class="hide"></div>
+   </div>
+   <script>
+      function onInit() {
+
+         if (document.getElementById("customTextChk").checked) {
+            document.getElementById("showText").checked = false;
          }
-         
-         document.getElementById("showText").addEventListener("click", function(e) {
-             document.getElementById("customTextChk").checked = false;
-         }, false);
-         
-         document.getElementById("customTextChk").addEventListener("click", function(e) {
-             document.getElementById("showText").checked = false;
-         }, false);
-         
-         document.getElementById("showClip").addEventListener("click", function(e) {
-             document.getElementById("showRecentClip").checked = false;
-         }, false);
-         
-         document.getElementById("showRecentClip").addEventListener("click", function(e) {
-             document.getElementById("showClip").checked = false;
-         }, false);
-         
-         document.getElementById("show_ref").addEventListener("click", function(e) {
-             if (document.getElementById("show_ref").innerText === "hide") {
-                 document.getElementById("show_ref").innerText = "show";
-                 document.getElementById("ref").setAttribute('type', 'password');
-             } else {
-                 document.getElementById("show_ref").innerText = "hide";
-                 document.getElementById("ref").setAttribute('type', 'text');
-             }
-         }, false);
-         
-         document.getElementById("generate_button").addEventListener("click", function(e) {
-             let mainAccount = document.getElementById("mainAccount").value;
-             let customText = document.getElementById("customText").value;
-             let showClip = document.getElementById("showClip").checked;
-             let showRecentClip = document.getElementById("showRecentClip").checked;
-             let modsOnly = document.getElementById("modsOnly").checked;
-             let showText = document.getElementById("showText").checked;
-             let customTextChk = document.getElementById("customTextChk").checked;
-             if (!mainAccount) {
-                 alert('Twitch username is not set');
-             }
-             let ref = document.getElementById("ref").value;
-             localStorage.setItem("TwitchSORef", ref);
-             localStorage.setItem("TwitchSOMainAccount", mainAccount);
-         
-             //build overlay url
-             if (mainAccount) {
-                 let srcURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
-                 let fullUrl = srcURL + "shoutout.html?channel=" + mainAccount.toLowerCase() + "&showClip=" + showClip + "&showRecentClip=" + showRecentClip + "&showText=" + showText + "&customTextChk=" + customTextChk + "&customText=" + customText + "&modsOnly=" + modsOnly + "&ref=" + btoa(ref);
-                 document.getElementById("overlaylink").classList.remove("hide");
-                 document.getElementById("overlaylink").innerHTML = "Add this link as a browser source in OBS.<br>" +
-                     "<a style='word-break:break-all;' href='" + fullUrl + "' target='_blank'>" + fullUrl + "</a><br><span class='text-warning'>* Never share this url with anyone or show it on stream!</span>";
-                 alert("Do not share with anyone! ");
-             } else {
-                 alert("Error Contact me @ DeadPanda#0001 on discord")
-             }
-         });
-      </script>
-      <footer id="footer">
-         <a>Email: DeadPandaTwitch@gmail.com</a></p>
-      </footer>
-   </body>
-   <script type="text/javascript">
-      var siteWidth = 1280;
-      var scale = screen.width / siteWidth;
-      
-      document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=' + siteWidth + ', initial-scale=' + scale + '');
+
+         if (document.getElementById("showText").checked) {
+            document.getElementById("customTextChk").checked = false;
+         }
+
+         document.getElementById("ref").value = localStorage.getItem("TwitchSORef");
+         document.getElementById("mainAccount").value = localStorage.getItem("TwitchSOMainAccount");
+
+         if (document.getElementById("showClip").checked) {
+            document.getElementById("showRecentClip").checked = false;
+         }
+
+         if (document.getElementById("showRecentClip").checked) {
+            document.getElementById("showClip").checked = false;
+         }
+      }
+
+      document.getElementById("showText").addEventListener("click", function (e) {
+         document.getElementById("customTextChk").checked = false;
+      }, false);
+
+      document.getElementById("customTextChk").addEventListener("click", function (e) {
+         document.getElementById("showText").checked = false;
+      }, false);
+
+      document.getElementById("showClip").addEventListener("click", function (e) {
+         document.getElementById("showRecentClip").checked = false;
+      }, false);
+
+      document.getElementById("showRecentClip").addEventListener("click", function (e) {
+         document.getElementById("showClip").checked = false;
+      }, false);
+
+      document.getElementById("show_ref").addEventListener("click", function (e) {
+         if (document.getElementById("show_ref").innerText === "hide") {
+            document.getElementById("show_ref").innerText = "show";
+            document.getElementById("ref").setAttribute('type', 'password');
+         } else {
+            document.getElementById("show_ref").innerText = "hide";
+            document.getElementById("ref").setAttribute('type', 'text');
+         }
+      }, false);
+
+      document.getElementById("generate_button").addEventListener("click", function (e) {
+         let mainAccount = document.getElementById("mainAccount").value;
+         let customText = document.getElementById("customText").value;
+         let showClip = document.getElementById("showClip").checked;
+         let showRecentClip = document.getElementById("showRecentClip").checked;
+         let modsOnly = document.getElementById("modsOnly").checked;
+         let showText = document.getElementById("showText").checked;
+         let customTextChk = document.getElementById("customTextChk").checked;
+         if (!mainAccount) {
+            alert('Twitch username is not set');
+         }
+         let ref = document.getElementById("ref").value;
+         localStorage.setItem("TwitchSORef", ref);
+         localStorage.setItem("TwitchSOMainAccount", mainAccount);
+
+         //build overlay url
+         if (mainAccount) {
+            let srcURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            let fullUrl = srcURL + "shoutout.html?channel=" + mainAccount.toLowerCase() + "&showClip=" + showClip + "&showRecentClip=" + showRecentClip + "&showText=" + showText + "&customTextChk=" + customTextChk + "&customText=" + customText + "&modsOnly=" + modsOnly + "&ref=" + btoa(ref);
+            document.getElementById("overlaylink").classList.remove("hide");
+            document.getElementById("overlaylink").innerHTML = "Add this link as a browser source in OBS.<br>" +
+               "<a style='word-break:break-all;' href='" + fullUrl + "' target='_blank'>" + fullUrl + "</a><br><span class='text-warning'>* Never share this url with anyone or show it on stream!</span>";
+            alert("Do not share with anyone! ");
+         }
+      });
    </script>
+   <footer id="footer">Email: DeadPandaTwitch@gmail.com
+   </footer>
+</body>
+<!-- <script type="text/javascript">
+   var siteWidth = 1280;
+   var scale = screen.width / siteWidth;
+
+   document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=' + siteWidth + ', initial-scale=' + scale + '');
+</script> -->
+
 </html>

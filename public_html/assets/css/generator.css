@@ -21,31 +21,36 @@ body .navbar {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: #424242;
+  background-color: var(--button-color);
   padding: 0.5%;
 }
 
-body .navbar .nav .logo {
+body .navbar .Buttons {
   display: relative;
   text-decoration: none;
 }
 
-body .navbar .nav .logo .logo-1 {
+body .navbar .Buttons .Customize {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 200%;
-  color: var(--twitch-color);
-  background-color: var(--button-color);
+  height: 4vh;
+  font-size: 150%;
+  color: white;
+  background-color: var(--twitch-color);
   border-radius: 0.5em;
-  padding-bottom: 0.3%;
-  padding-top: 0.3%;
-  padding-right: 0.75%;
-  padding-left: 0.75%;
 }
 
-body .navbar .nav .logo .logo-2 {
+body .navbar .Buttons .Tutorial {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4vh;
+  font-size: 150%;
   color: white;
+  background-color: var(--twitch-color);
+  border-radius: 0.5em;
 }
 
 body .navbar .Tutorial {
@@ -86,51 +91,6 @@ body .navbar .Customize .customize {
   padding-top: 0.15em;
   padding-right: 0.5em;
   padding-left: 0.5em;
-}
-
-body .navbar .dropdown {
-  padding-right: 2.5%;
-  position: relative;
-  float: right;
-}
-
-body .navbar .dropdown .dropbtn {
-  background: none;
-  color: var(--twitch-bg);
-  border: none;
-  cursor: pointer;
-}
-
-body .navbar .dropdown .dropbtn .menu {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  pointer-events: none;
-  height: 3em;
-  width: 3em;
-}
-
-body .navbar .dropdown .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: black;
-  background-color: #6441a5;
-  min-width: 160px;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
-  z-index: 1;
-  right: 0;
-}
-
-body .navbar .dropdown .dropdown-content .link {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-body .navbar .dropdown .show {
-  display: block;
 }
 
 body .container {
@@ -190,8 +150,7 @@ body .container .form-label-group #mainAccount {
   color: black;
   border-style: hidden;
   width: 25%;
-  padding: 0.25em;
-  margin-bottom: 1em;
+  margin-left: 1.25%;
 }
 
 body .container .form-label-group #ref {
@@ -200,7 +159,7 @@ body .container .form-label-group #ref {
   color: black;
   border-style: hidden;
   width: 25%;
-  padding: 0.25em;
+  margin-left: 2.5%;
 }
 
 body .container .form-label-group #show_ref {
@@ -292,28 +251,8 @@ body .footer .foot {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    background-color: #424242;
+    background-color: var(--background);
     padding: 0.5%;
-  }
-  body .navbar .nav .logo {
-    display: relative;
-    text-decoration: none;
-  }
-  body .navbar .nav .logo .logo-1 {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-size: 200%;
-    color: var(--twitch-color);
-    background-color: var(--button-color);
-    border-radius: 0.5em;
-    padding-bottom: 0.3%;
-    padding-top: 0.3%;
-    padding-right: 0.75%;
-    padding-left: 0.75%;
-  }
-  body .navbar .nav .logo .logo-2 {
-    color: white;
   }
   body .navbar .Tutorial {
     display: none;
@@ -333,6 +272,9 @@ body .footer .foot {
     padding-right: 0.5em;
     padding-left: 0.5em;
   }
+  body .navbar .Tutorial .tutorial:hover {
+    background-color: #26193d;
+  }
   body .navbar .Customize {
     display: inline-block;
   }
@@ -351,45 +293,6 @@ body .footer .foot {
     padding-right: 0.5em;
     padding-left: 0.5em;
   }
-  body .navbar .dropdown {
-    padding-right: 2.5%;
-    position: relative;
-    float: right;
-  }
-  body .navbar .dropdown .dropbtn {
-    background: none;
-    color: var(--twitch-bg);
-    border: none;
-    cursor: pointer;
-  }
-  body .navbar .dropdown .dropbtn .menu {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    pointer-events: none;
-    height: 3em;
-    width: 3em;
-  }
-  body .navbar .dropdown .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: black;
-    background-color: #6441a5;
-    min-width: 160px;
-    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
-    z-index: 1;
-    right: 0;
-  }
-  body .navbar .dropdown .dropdown-content .link {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  body .navbar .dropdown .show {
-    display: block;
-  }
   body .container {
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
@@ -406,10 +309,14 @@ body .footer .foot {
     bottom: 10%;
     top: 0;
   }
-  body .container .mt-4 {
+  body .container .title {
     text-align: center;
+    color: white;
+    background: var(--twitch-color);
+    padding-top: 5vh;
+    padding-bottom: 5vh;
   }
-  body .container .mt-4 .generate_link {
+  body .container .title .generate_link {
     -webkit-text-decoration-line: none;
             text-decoration-line: none;
     width: 15em;
@@ -487,6 +394,25 @@ body .footer .foot {
     font-size: 1.5em;
     padding-left: 2em;
   }
+  body .container .access_button {
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  body .container .access_button #access_button {
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none;
+    width: 15em;
+    font-size: 2em;
+    color: white;
+    background-color: var(--twitch-color);
+    border-style: none;
+    border-radius: 0.5em;
+    padding-bottom: 0.2em;
+    padding-top: 0.15em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+  }
   body .container .generate_button {
     text-align: center;
     margin-top: 1.5em;
@@ -506,19 +432,22 @@ body .footer .foot {
     padding-right: 0.5em;
     padding-left: 0.5em;
   }
-  body .footer {
+  body .container .overlaylink {
+    color: white;
+  }
+  body .container .overlaylink #a {
+    color: white;
+  }
+  body #footer {
+    color: white;
+    background-color: #6441a5;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     padding-top: 1%;
+    padding-bottom: 1%;
     padding-left: 1%;
-    background-color: black;
-    background-color: #474747bf;
-  }
-  body .footer .foot {
-    text-decoration: none;
-    color: white;
   }
 }
 /*# sourceMappingURL=generator.css.map */

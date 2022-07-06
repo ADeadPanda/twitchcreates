@@ -170,14 +170,11 @@ $(document).ready(function () {
                     "' type='video/mp4'></video>"
                 ).appendTo("#container");
 
-                object.onplay = function () {
-                  document.getElementById("clip").remove();
-                };
-
                 // Remove video element after it has finished playing
                 document.getElementById("clip").onended = function (e) {
                   document.getElementById("clip").remove();
                   document.getElementById("text-container").remove();
+                  document.getElementById("container").remove();
                 };
               }
             });

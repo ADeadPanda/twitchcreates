@@ -18,26 +18,27 @@ body {
     left: 0;
     width: 100%;
     height: fit-content;
-    background-color: #424242;
+    background-color: var(--button-color);
     padding: 0.5%;
-    .nav {
-      .logo {
-        display: relative;
-        text-decoration: none;
-        .logo-1 {
-          width: fit-content;
-          font-size: 200%;
-          color: var(--twitch-color);
-          background-color: var(--button-color);
-          border-radius: 0.5em;
-          padding-bottom: 0.3%;
-          padding-top: 0.3%;
-          padding-right: 0.75%;
-          padding-left: 0.75%;
-        }
-        .logo-2 {
-          color: white;
-        }
+    .Buttons {
+      display: relative;
+      text-decoration: none;
+      .Customize {
+        width: fit-content;
+        height: 4vh;
+        font-size: 150%;
+        color: white;
+        background-color: var(--twitch-color);
+        border-radius: 0.5em;
+      }
+      .Tutorial {
+        display: inline-block;
+        width: fit-content;
+        height: 4vh;
+        font-size: 150%;
+        color: white;
+        background-color: var(--twitch-color);
+        border-radius: 0.5em;
       }
     }
     .Tutorial {
@@ -71,42 +72,6 @@ body {
         padding-top: 0.15em;
         padding-right: 0.5em;
         padding-left: 0.5em;
-      }
-    }
-    .dropdown {
-      padding-right: 2.5%;
-      position: relative;
-      float: right;
-      .dropbtn {
-        background: none;
-        color: var(--twitch-bg);
-        border: none;
-        cursor: pointer;
-        .menu {
-          align-self: center;
-          pointer-events: none;
-          height: 3em;
-          width: 3em;
-        }
-      }
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: rgb(0, 0, 0);
-        background-color: #6441a5;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
-        z-index: 1;
-        right: 0;
-        .link {
-          color: white;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-        }
-      }
-      .show {
-        display: block;
       }
     }
   }
@@ -158,8 +123,7 @@ body {
         color: black;
         border-style: hidden;
         width: 25%;
-        padding: 0.25em;
-        margin-bottom: 1em;
+        margin-left: 1.25%;
       }
       #ref {
         font-size: 1em;
@@ -167,7 +131,7 @@ body {
         color: black;
         border-style: hidden;
         width: 25%;
-        padding: 0.25em;
+        margin-left: 2.5%;
       }
       #show_ref {
         display: inline-block;
@@ -250,28 +214,8 @@ body {
       left: 0;
       width: 100%;
       height: fit-content;
-      background-color: #424242;
+      background-color: var(--background);
       padding: 0.5%;
-      .nav {
-        .logo {
-          display: relative;
-          text-decoration: none;
-          .logo-1 {
-            width: fit-content;
-            font-size: 200%;
-            color: var(--twitch-color);
-            background-color: var(--button-color);
-            border-radius: 0.5em;
-            padding-bottom: 0.3%;
-            padding-top: 0.3%;
-            padding-right: 0.75%;
-            padding-left: 0.75%;
-          }
-          .logo-2 {
-            color: white;
-          }
-        }
-      }
       .Tutorial {
         display: none;
         .tutorial {
@@ -287,8 +231,10 @@ body {
           padding-right: 0.5em;
           padding-left: 0.5em;
         }
+        .tutorial:hover {
+          background-color: #26193d;
+        }
       }
-
       .Customize {
         display: inline-block;
         .customize {
@@ -305,42 +251,6 @@ body {
           padding-left: 0.5em;
         }
       }
-      .dropdown {
-        padding-right: 2.5%;
-        position: relative;
-        float: right;
-        .dropbtn {
-          background: none;
-          color: var(--twitch-bg);
-          border: none;
-          cursor: pointer;
-          .menu {
-            align-self: center;
-            pointer-events: none;
-            height: 3em;
-            width: 3em;
-          }
-        }
-        .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: rgb(0, 0, 0);
-          background-color: #6441a5;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493);
-          z-index: 1;
-          right: 0;
-          .link {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-          }
-        }
-        .show {
-          display: block;
-        }
-      }
     }
     .container {
       min-height: fit-content;
@@ -355,8 +265,12 @@ body {
       right: 0;
       bottom: 10%;
       top: 0;
-      .mt-4 {
+      .title {
         text-align: center;
+        color: white;
+        background: var(--twitch-color);
+        padding-top: 5vh;
+        padding-bottom: 5vh;
         .generate_link {
           text-decoration-line: none;
           width: 15em;
@@ -436,7 +350,24 @@ body {
         font-size: 1.5em;
         padding-left: 2em;
       }
-
+      .access_button {
+        text-align: center;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        #access_button {
+          text-decoration-line: none;
+          width: 15em;
+          font-size: 2em;
+          color: white;
+          background-color: var(--twitch-color);
+          border-style: none;
+          border-radius: 0.5em;
+          padding-bottom: 0.2em;
+          padding-top: 0.15em;
+          padding-right: 0.5em;
+          padding-left: 0.5em;
+        }
+      }
       .generate_button {
         text-align: center;
         margin-top: 1.5em;
@@ -455,20 +386,24 @@ body {
           padding-left: 0.5em;
         }
       }
+      .overlaylink {
+        color: white;
+        #a {
+          color: white;
+        }
+      }
     }
-    .footer {
+
+    #footer {
+      color: white;
+      background-color: #6441a5;
       position: fixed;
       left: 0;
       bottom: 0;
       width: 100%;
       padding-top: 1%;
+      padding-bottom: 1%;
       padding-left: 1%;
-      background-color: rgb(0, 0, 0);
-      background-color: #474747bf;
-      .foot {
-        text-decoration: none;
-        color: white;
-      }
     }
   }
 }
